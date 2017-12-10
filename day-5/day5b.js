@@ -4,7 +4,7 @@ let input = [0, 0, 2, 0, 0, 0, -5, -5, -4, 1, -5, 1, -1, -7, -1, -2, -14, -5, -5
         let ix = 0, moves = 0;
 
         while (ix < input.length && ix >= 0) {
-            ix += (input[ix]++);
+            ix += (input[ix] >= 3) ? (input[ix]--) : (input[ix]++);
             moves++;
         }
 
